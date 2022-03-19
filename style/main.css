@@ -1,0 +1,378 @@
+/* grid beginning for page Layout */
+* {box-sizing: border-box;}
+
+    .wrapper {
+        max-width: 1024px;
+        margin: 0 auto;
+        font: 1.2em Arial, Helvetica, arial, sans-serif;
+    }
+
+    .wrapper > * {
+        border: 6px solid rgb(130, 246, 246);
+        background-color: #ffffff;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+  
+.main-head {
+  grid-area: header;
+  text-align: center;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+/* pictures related to the header */
+#world {
+  width: 150px;
+  height: 150px;
+}
+
+#title {
+  width: 800px;
+  height: 100px;
+  transform: translate(5%, -10%);
+}
+/* end of pictures related to header */
+
+.content {
+  grid-area: content;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+}
+.main-nav {
+  grid-area: nav;
+}
+
+.placess {
+  grid-area: sidebar;
+  font-size: 17px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.ad {
+  grid-area: ad;
+  font-size: 17px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#adw {
+  text-align: left;
+}
+
+.main-footer {
+  grid-area: footer;
+}
+
+/* Pictures layout beginning */
+
+/* layout */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: black;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create t equal columns that sits next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Pictures ending */
+
+/* navigation bar begining  */
+.wrapper {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas: 
+    "header"
+    "nav"
+    "content"
+    "sidebar"
+    "ad"
+    "footer";
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 260px;
+  background-color:#a6c3fa;
+  font-weight: bold;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+li a {
+  display: block;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: rgb(20, 53, 243);
+  color: rgb(255, 255, 255);
+}
+
+li a:hover:not(.active) {
+  background-color: white;
+  color: rgb(20, 53, 243);
+}
+
+/* nagivation bar ending */
+
+/* website gripd layout continuation */
+
+/* website small size */
+@media (min-width: 500px) {
+  .wrapper {
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+      "header  header"
+      "nav     nav"
+      "sidebar content"
+      "ad      footer";
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/* website regular size */
+@media (min-width: 600px) {
+  .wrapper {
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas: 
+      "header header  header"
+      "nav    content sidebar"
+      "nav    content ad"
+      "footer footer  footer"
+   }
+   nav ul {
+     flex-direction: column;
+   }
+}
+
+/* bullet point */
+ul.a {
+  list-style-type: circle;
+  transform: translate(10%, 10%);
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+/* bullet point end */
+
+#wonders{
+  text-transform: uppercase;
+}
+
+/* gif image */
+#example {
+  width: 100%;
+  height: auto;
+}
+
+/* about paragraph */
+
+#parapragh {
+  font: Arial, Helvetica, arial, sans-serif;
+  font-size: 16px;
+}
+
+#Photo7 {
+  height: 284px;
+}
+/* Create two equal columns that floats next to each other */
+
+/* Flip Images */
+
+.flip-card {
+  background-color: transparent;
+  width: 460px;
+  height: 320px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #a6c3fa;
+  color: Black;
+  font-size: medium;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  transform: rotateY(180deg);
+}
+
+#front {
+  width: fit-content;
+}
+
+/* Brazil section */
+
+/* Larger Flip Card */
+
+.flip-card2 {
+  float: left;  
+  width: 750px;
+  height: 500px;
+  perspective: 1000px;
+}
+
+.flip-card-inner2 {
+  position: relative;
+  width: 750px;
+  height: 500px;
+  margin: 0 15% 0 15%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card2:hover .flip-card-inner2 {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front2, .flip-card-back2 {
+  position: absolute;
+  width: 750px;
+  height: 500px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front2 {
+  color: black;
+}
+
+.flip-card-back2 {
+  background-color: #a6c3fa;
+  color: Black;
+  font-size: medium;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  transform: rotateY(180deg);
+}
+
+
+#Photo5 {
+  width: 750px;
+  display: block;
+}
+
+
+/*sign up button*/
+
+#SignUp {
+  background-color: #75e3f1;
+  border: none;
+  color: black;
+  font-weight: bold;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+ #create{
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ }
+
+ #submit{
+  background-color: #a6c3fa;
+  border: none;
+  outline-style: solid;
+  color: black;
+  font-weight: bold;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#login{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*to hide } else {?> <a href="index.php" id="else"> <?php } ?> */
+
+#else{
+  visibility: hidden;
+}
+
+/*button to submit login and password*/
+
+#sub{
+  background-color: #a6c3fa;
+  border: none;
+  outline-style: solid;
+  color: black;
+  font-weight: bold;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
